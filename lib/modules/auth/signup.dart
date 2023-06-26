@@ -18,6 +18,7 @@ class Signup extends StatefulWidget {
 }
 
 class _SignupState extends State<Signup> {
+
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final GlobalKey<ScaffoldState> _scaKey = GlobalKey<ScaffoldState>();
 
