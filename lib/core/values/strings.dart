@@ -7,6 +7,13 @@ const login_button = 'Sign In';
 const exist_acc_txt = 'Don’t have an account ?  ';
 const signup_text = 'Sign Up';
 
+// Signup
+const signup_title = 'Sign Up';
+const signup_button = "Sign Up";
+const login_acc_txt = 'Already have an account ?  ';
+const login_text = 'Sign In';
+const signup_sub_title = "Hi There !!";
+
 // Home
 const home_title = 'Dashboard Overview';
 
@@ -14,8 +21,12 @@ const home_title = 'Dashboard Overview';
 const loginSuccess = 'Login Successfully';
 const loginSuccessMsg = 'Congratulations';
 
+const signupSuccess = 'Registration Successfully';
+const signupSuccessMsg = 'Congratulations';
+
 // API Error Message
 const loginFailed = 'Login Failed';
+const signupFailed = 'Registration Failed';
 
 
 // -------------- ##### --------------------
