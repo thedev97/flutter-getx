@@ -15,7 +15,7 @@ class Commons {
   static const buttonShortHeight = 40.0;
   static BorderRadius borderRadius = BorderRadius.circular(baseRadius);
   static BorderRadius smallBorderRadius =
-  BorderRadius.circular(smallBaseRadius);
+      BorderRadius.circular(smallBaseRadius);
   static BorderRadius bigBorderRadius = BorderRadius.circular(bigBaseRadius);
 
   static BoxShadow shadow() {
@@ -26,7 +26,7 @@ class Commons {
     );
   }
 
-  static snackBar(title, msg){
+  static snackBar(title, msg) {
     return Get.snackbar(title, msg,
         titleText: Text(
           title,
@@ -36,16 +36,15 @@ class Commons {
           msg,
           style: AppTextStyles.normalText,
         ));
-}
-
+  }
 
   static AppBar appBar(
-      BuildContext context, {
-        String? label,
-        String? taskLabel,
-        Widget? leading,
-        List<Widget>? actions,
-      }) {
+    BuildContext context, {
+    String? label,
+    String? taskLabel,
+    Widget? leading,
+    List<Widget>? actions,
+  }) {
     return AppBar(
       backgroundColor: Colors.black,
       elevation: 0,
@@ -85,9 +84,9 @@ class Commons {
   }
 
   static bool isBottom(
-      ScrollController scrollController, [
-        double scrollOffsetThreshold = 0.7,
-      ]) {
+    ScrollController scrollController, [
+    double scrollOffsetThreshold = 0.7,
+  ]) {
     if (!scrollController.hasClients) return false;
     final maxScroll = scrollController.position.maxScrollExtent;
     final currentScroll = scrollController.offset;
@@ -116,7 +115,3 @@ const Widget verticalSpaceLarge = SizedBox(height: baseMargin * 8);
 const Widget verticalSpaceExtraLarge = SizedBox(height: baseMargin * 10);
 const Widget verticalLargeSpace = SizedBox(height: baseMargin * 15);
 const Widget bundleVerticalSpacing = SizedBox(height: baseMargin * 1.5);
-
-
-
-
