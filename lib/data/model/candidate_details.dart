@@ -1,53 +1,40 @@
 import 'dart:convert';
 
-Candidate candidateFromJson(String str) => Candidate.fromJson(json.decode(str));
+CandidateDetails candidateDetailsFromJson(String str) =>
+    CandidateDetails.fromJson(json.decode(str));
 
-String candidateToJson(Candidate data) => json.encode(data.toJson());
+String candidateDetailsToJson(CandidateDetails data) =>
+    json.encode(data.toJson());
 
-class Candidate {
-  int page;
-  int perPage;
-  int total;
-  int totalPages;
-  List<Datum> data;
+class CandidateDetails {
+  Data data;
   Support support;
 
-  Candidate({
-    required this.page,
-    required this.perPage,
-    required this.total,
-    required this.totalPages,
+  CandidateDetails({
     required this.data,
     required this.support,
   });
 
-  factory Candidate.fromJson(Map<String, dynamic> json) => Candidate(
-        page: json["page"],
-        perPage: json["per_page"],
-        total: json["total"],
-        totalPages: json["total_pages"],
-        data: List<Datum>.from(json["data"].map((x) => Datum.fromJson(x))),
+  factory CandidateDetails.fromJson(Map<String, dynamic> json) =>
+      CandidateDetails(
+        data: Data.fromJson(json["data"]),
         support: Support.fromJson(json["support"]),
       );
 
   Map<String, dynamic> toJson() => {
-        "page": page,
-        "per_page": perPage,
-        "total": total,
-        "total_pages": totalPages,
-        "data": List<dynamic>.from(data.map((x) => x.toJson())),
+        "data": data.toJson(),
         "support": support.toJson(),
       };
 }
 
-class Datum {
+class Data {
   int id;
   String email;
   String firstName;
   String lastName;
   String avatar;
 
-  Datum({
+  Data({
     required this.id,
     required this.email,
     required this.firstName,
@@ -55,7 +42,7 @@ class Datum {
     required this.avatar,
   });
 
-  factory Datum.fromJson(Map<String, dynamic> json) => Datum(
+  factory Data.fromJson(Map<String, dynamic> json) => Data(
         id: json["id"],
         email: json["email"],
         firstName: json["first_name"],

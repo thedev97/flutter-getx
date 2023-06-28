@@ -1,6 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'values/values.dart';
+import 'package:get/get.dart';
+import 'package:flutter/material.dart';
+import '../widgets/candidate/candidate_detail_card.dart';
 import 'package:job_login_getx/core/values/extension.dart';
 
 class Commons {
@@ -37,6 +38,21 @@ class Commons {
           style: AppTextStyles.normalText,
         ));
   }
+
+  static alertDialog(avatar, firstName, lastName, email) {
+    return Get.defaultDialog(
+      title: "Details",
+      titleStyle: AppTextStyles.header2,
+      content: CandidateDetailCard(
+        avatar: avatar,
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+      )
+    );
+  }
+
+  //Text(email, style: AppTextStyles.normalText,)
 
   static AppBar appBar(
     BuildContext context, {

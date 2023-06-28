@@ -10,6 +10,15 @@ class AppTextStyles {
       ],
       color: Colors.black);
 
+  static final TextStyle header2 = GoogleFonts.lato(
+      fontWeight: FontWeight.w500,
+      fontSize: 14,
+      shadows: [
+        const Shadow(
+            color: Colors.black, offset: Offset(0.0, 0.5), blurRadius: 0.5),
+      ],
+      color: Colors.black);
+
   static final TextStyle subHeader = GoogleFonts.lato(
       fontWeight: FontWeight.w400,
       fontSize: 12,

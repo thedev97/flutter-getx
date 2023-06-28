@@ -27,8 +27,8 @@ const signupSuccessMsg = 'Congratulations';
 // API Error Message
 const loginFailed = 'Login Failed';
 const signupFailed = 'Registration Failed';
-const listFailed = 'Failed';
-const listFailedSubMsg = 'Error Fetching The Data';
+const failed = 'Failed';
+const failedSubMsg = 'Error Fetching The Data';
 
 
 // -------------- ##### --------------------

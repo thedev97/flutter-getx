@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:get/get.dart';
 import '../../core/commons.dart';
 import '../../core/remote_url.dart';
@@ -26,7 +25,7 @@ class CandidateListController extends GetxController {
         var result = jsonDecode(response.body);
         candidate = Candidate.fromJson(result);
       } else {
-        Commons.snackBar(listFailed, listFailedSubMsg);
+        Commons.snackBar(failed, failedSubMsg);
       }
     } catch (e) {
       Commons.snackBar('Exception', e.toString());

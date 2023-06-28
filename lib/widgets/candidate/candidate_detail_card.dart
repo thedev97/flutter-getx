@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../../core/values/values.dart';
 
-class CandidateCard extends StatelessWidget {
-  CandidateCard(
+class CandidateDetailCard extends StatelessWidget {
+  CandidateDetailCard(
       {Key? key,
       required this.firstName,
       required this.lastName,
@@ -18,7 +18,7 @@ class CandidateCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
       child: Row(
         children: [
           CircleAvatar(
@@ -47,11 +47,6 @@ class CandidateCard extends StatelessWidget {
                 ],
               ),
             ),
-          ),
-          Icon(
-            Icons.arrow_forward_ios_rounded,
-            color: Colors.black.withOpacity(0.8),
-            size: 15,
           ),
         ],
       ),
