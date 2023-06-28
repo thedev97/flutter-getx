@@ -2,31 +2,8 @@ import 'values/values.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import '../widgets/candidate/candidate_detail_card.dart';
-import 'package:job_login_getx/core/values/extension.dart';
 
 class Commons {
-  static const lightThemeLightShadowColor = Color(0xffCECECE);
-  static const baseRadius = 12.0;
-  static const baseMargin = 8.0;
-  static const smallBaseRadius = 8.0;
-  static const bigBaseRadius = 16.0;
-  static const baseIconSize = 24.0;
-  static const arrowDownButtonHeight = 25.0;
-  static const buttonHeight = 50.0;
-  static const buttonShortHeight = 40.0;
-  static BorderRadius borderRadius = BorderRadius.circular(baseRadius);
-  static BorderRadius smallBorderRadius =
-      BorderRadius.circular(smallBaseRadius);
-  static BorderRadius bigBorderRadius = BorderRadius.circular(bigBaseRadius);
-
-  static BoxShadow shadow() {
-    return const BoxShadow(
-      blurRadius: 10,
-      color: lightThemeLightShadowColor,
-      offset: Offset(0, 4),
-    );
-  }
-
   static snackBar(title, msg) {
     return Get.snackbar(title, msg,
         titleText: Text(
@@ -50,65 +27,6 @@ class Commons {
         email: email,
       )
     );
-  }
-
-  //Text(email, style: AppTextStyles.normalText,)
-
-  static AppBar appBar(
-    BuildContext context, {
-    String? label,
-    String? taskLabel,
-    Widget? leading,
-    List<Widget>? actions,
-  }) {
-    return AppBar(
-      backgroundColor: Colors.black,
-      elevation: 0,
-      leading: leading,
-      title: Padding(
-        padding: const EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 0.0),
-        child: Row(
-          children: [
-            const SizedBox(
-              width: 15,
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  label ?? "",
-                  style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                      fontWeight: FontWeight.w600,
-                      color: Colors.grey,
-                      fontSize: 13.0),
-                ),
-                verticalSpaceTiny,
-                Text(
-                  taskLabel ?? "",
-                  style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                      fontWeight: FontWeight.w600,
-                      color: Colors.white,
-                      fontSize: 14.0.sp),
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
-      actions: actions,
-    );
-  }
-
-  static bool isBottom(
-    ScrollController scrollController, [
-    double scrollOffsetThreshold = 0.7,
-  ]) {
-    if (!scrollController.hasClients) return false;
-    final maxScroll = scrollController.position.maxScrollExtent;
-    final currentScroll = scrollController.offset;
-
-    return currentScroll >= (maxScroll * scrollOffsetThreshold) &&
-        currentScroll > 0;
   }
 }
 
