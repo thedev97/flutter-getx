@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         translations: Languages(),
         locale: const Locale('en', 'US'),
         fallbackLocale: const Locale('en', 'US'),
-        getPages: AppRoutes.appRoutes();
+        getPages: AppRoutes.appRoutes()
     );
   }
 }
