@@ -73,6 +73,24 @@ class _HomeState extends State<Home> {
             ));
     return Padding(
         padding: EdgeInsets.only(top: sizeHeight * 0.08),
-        child: ListView(children: [...candidates]));
+        child: ListView(children: [...candidates, homeButton()]));
+  }
+
+  Widget homeButton() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+      child: ElevatedButton(
+          onPressed: () {
+            Get.toNamed('/page1', arguments: [
+              'Beginner in Getx',
+              'Intermediate in Getx',
+              'Expert in Getx'
+            ]);
+          },
+          child: Text(
+            'Home',
+            style: AppTextStyles.highlightText,
+          )),
+    );
   }
 }

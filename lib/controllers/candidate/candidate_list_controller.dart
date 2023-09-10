@@ -4,7 +4,7 @@ import '../../core/commons.dart';
 import '../../core/remote_url.dart';
 import 'package:http/http.dart' as http;
 import '../../core/values/strings.dart';
-import '../../data/model/candidate_list.dart';
+import '../../models/candidate_list.dart';
 
 class CandidateListController extends GetxController {
   Candidate? candidate;
