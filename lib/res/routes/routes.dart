@@ -1,12 +1,12 @@
 import 'route_names.dart';
 import 'package:get/get.dart';
-import '../modules/dashboard/home.dart';
-import '../modules/examples/screen_1.dart';
-import '../modules/examples/screen_2.dart';
-import '../modules/examples/screen_3.dart';
-import '../modules/examples/screen_4.dart';
-import '../modules/examples/screen_5.dart';
-import '../modules/examples/screen_6.dart';
+import '../../modules/dashboard/home.dart';
+import '../../modules/examples/screen_1.dart';
+import '../../modules/examples/screen_2.dart';
+import '../../modules/examples/screen_3.dart';
+import '../../modules/examples/screen_4.dart';
+import '../../modules/examples/screen_5.dart';
+import '../../modules/examples/screen_6.dart';
 
 class AppRoutes {
   static appRoutes() => [
